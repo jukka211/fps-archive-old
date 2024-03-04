@@ -1,0 +1,332 @@
+@font-face {
+  font-family:TexGyreHeros;
+  src: url("texgyreheros.gyreheros-regular.otf");
+}
+@font-face {
+  font-family:TexGyreHerosBold;
+  src: url("texgyreheros.gyreheros-bold.otf");
+}
+@font-face {
+  font-family:TexGyreHerosCondensed;
+  src: url("texgyreheros.gyreheroscondensed-regular.otf");
+}
+@font-face {
+  font-family:TexGyreHerosCondensed-Bold;
+  src: url("texgyreheros.gyreheroscondensed-bold.otf");
+}
+
+#box {
+  
+  position: absolute;
+  font-size: 28pt;
+  display: none;
+}
+
+body {
+ 
+  
+  overflow: hidden;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  margin-top: 0;
+  margin-bottom: 0;
+  
+}
+
+.container {
+  flex: 15;
+  
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto; 
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+
+    
+  
+}
+.column {
+  position: relative;
+  padding: 0;
+  margin-right: 5px;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: flex 360ms ease-out;
+  mix-blend-mode: exclusion;
+  z-index: 9;
+}
+.column:click {
+  mix-blend-mode: normal;
+}
+
+.column img {
+  width: 100%;
+  height: 100%;
+  align-self: flex-end; /* Aligns the image to the bottom of the column */
+  object-fit: contain;
+  padding: 0;
+  cursor: pointer;
+  
+}
+
+
+
+.trigger-container{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: flex-end;
+  align-self: flex-end;
+  object-fit: contain;
+  padding: 0;
+  z-index: -1;
+  cursor: pointer;
+  overflow: hidden;
+
+}
+h4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  line-height: 0pt;
+  font-style: normal;
+}
+.container2{
+  z-index: 9999;
+  flex: 0.5;
+  width: 100%;
+  height:auto;
+  
+  text-align: justify;
+  font-family:TexGyreHerosBold;
+  font-size: 10pt;
+  line-height: 16pt;
+  
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  
+  
+}
+
+
+.text, .text2, .text3, .text4,.text5,.text6,.text7,.text8,.text9,.text10,.text11,.text12,.text13,.text14, .text15{
+  white-space: nowrap;
+  width: 100%;
+  font-family:TexGyreHerosBold;
+  font-size: 10pt;
+  line-height: 16pt;
+  color: rgb(255, 255, 255);
+  
+  bottom: 0;
+  padding:0;
+  margin:0;
+  display: none;
+  padding-top: 6px; 
+  padding-bottom: 14px;
+  
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+ 
+}
+
+.name {
+  display: inline-block;
+  font-family:TexGyreHerosBold;
+  font-size: 10pt;
+  line-height: 16pt;
+  
+  
+  
+}
+.type {
+  font-family:TexGyreHeros;
+  font-size: 10pt;
+  line-height: 16pt;
+  
+}
+
+a{
+  font-family:TexGyreHerosBold;
+  color:white;
+  font-size: 10pt;
+  line-height: 16pt;
+  
+}
+
+.info {
+ 
+
+  position: fixed;
+  position: absolute;
+  top: 0;
+  
+  color: rgb(255, 255, 255);
+  
+  
+  
+  
+}
+
+.left {
+  font-family:TexGyreHerosBold;
+  position: fixed;
+  
+  right: 10px;
+}
+
+.right {
+  height: 100%;
+  width: 100%; /* Set the width to 100% of the viewport width */
+  letter-spacing: -1px;
+  white-space: nowrap;
+  
+ position: fixed;
+ text-align: center; /* Center text horizontally */
+ font-family:TexGyreHerosCondensed;
+ color: rgb(255, 255, 255);
+ line-height:100vh;
+ transform: translateY(-11%);
+ 
+ 
+ 
+ 
+ 
+}
+
+
+.hover-container {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+            margin: 0;
+            padding: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            overflow: hidden; /* Ensure text doesn't overflow */
+}
+
+
+.vertical-line {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #ffffff; /* Change color as needed */
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+  z-index: -9999;
+}
+
+#changeable-text {
+  transition: all 1s ease-in-out;
+
+  
+}
+
+.h2{
+  color: white;
+  font-family:TexGyreHeros;
+  font-size: 28pt;
+  
+}
+.information {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+ 
+  color: #ffffff;
+  height:auto;
+  z-index: 999;
+  font-family:TexGyreHerosBold;
+  font-size: 10pt;
+  line-height: 16pt;
+  
+}
+
+
+.fps-archive {
+  margin-left: 10px;
+}
+.title, .title2,.title3,.title4,.title5,.title6,.title7,.title8,.title9, .title10 {
+  display:none;
+}
+
+.contact {
+  margin-right: 10px;
+}
+::selection {
+  color: black;
+  background: white;
+}
+
+@media (max-width: 1000px) {
+  body{
+    overflow-x: hidden;
+  }
+ .container{
+  display: flex;
+  justify-content:flex-start; /* Align items horizontally in the center */
+  flex-direction: column;
+  text-align: center;
+  
+  
+  overflow-x: hidden;
+ }
+  .column {
+    text-align: center;
+    margin-right: auto; /* Push columns to the center */
+    margin-left: auto;
+      width:100%;
+      margin-bottom: 8px;
+      mix-blend-mode: exclusion;
+   
+    } 
+    .column img {
+      text-align: center;
+    }
+    .right {
+     
+      transform: translateY(-10%);
+    }
+    .vertical-line{
+     display: none;
+    }
+    
+    .text {
+      
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .text, .text2, .text3 {
+      width: 100%;
+      position: fixed;
+      overflow-x: auto;
+      margin-bottom: 5px;
+      margin-top: 0;
+      margin-left: 10px;
+      margin-right: 10px;
+     
+    }
+   .name {
+    
+    margin-right: 20px;
+   }
+    .container2{
+      flex:4;
+      overflow-x: auto;
+    }
+  
+    
+}

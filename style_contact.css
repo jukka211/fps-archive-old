@@ -1,0 +1,116 @@
+@font-face {
+  font-family:TexGyreHeros;
+  src: url("texgyreheros.gyreheros-regular.otf");
+}
+@font-face {
+  font-family:TexGyreHeros;
+  src: url("texgyreheros.gyreheros-bold.otf");
+}
+@font-face {
+  font-family:TexGyreHerosCondensed;
+  src: url("texgyreheros.gyreheroscondensed-regular.otf");
+}
+
+::selection {
+  color: black;
+  background: white;
+}
+
+body {
+ 
+  
+  
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  margin-top: 0;
+  margin-bottom: 0;
+  
+}
+
+
+.Text{
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  font-family:TexGyreHeros;
+  font-size: 24pt;
+  line-height: 32pt;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  text-align-last: center;
+  
+}
+p {
+  position: fixed;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  color: white;
+  font-family: TexGyreHeros, sans-serif; /* Added fallback font */
+  text-align: center;
+}
+
+.vertical-line {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #ffffff; /* Change color as needed */
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+}
+.information {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  
+ 
+  color: #ffffff;
+  height:auto;
+  
+  font-family:TexGyreHeros;
+  font-size: 10pt;
+  line-height: 16pt;
+  
+}
+
+
+.fps-archive {
+  margin-left: 10px;
+}
+.contact {
+  margin-right: 10px;
+}
+a{
+  
+  color:white;
+  
+  text-decoration: none;
+}
+@media (max-width: 1000px) {
+
+  .Text{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    font-family:TexGyreHeros;
+    font-size: 14pt;
+    line-height: 20pt;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-align-last: left;
+    padding-bottom: 88px;
+
+}
+p{
+  padding-left: 18px;
+  text-align: left;
+}
+.vertical-line {
+  display: none;
+}
+}
