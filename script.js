@@ -35,9 +35,9 @@ $(document).ready(function() {
      function() {
        // Check if the screen height is higher than 1500px
        if ($(window).height() > 1500) {
-         $(this).css('flex', '17'); 
+         $(this).css('flex', '18.8'); 
        } else if ($(window).height() > 1000) {
-         $(this).css('flex', '13.5');
+         $(this).css('flex', '14.8');
        } 
        else {
          $(this).css('flex', '11'); $(this).css('mix-blend-mode', 'difference'); 
