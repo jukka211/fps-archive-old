@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FPS Archive</title>
+  <title>Frames pro Second Archive</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>  
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
@@ -24,25 +26,41 @@
      
     
    <div class="information">
-    <tag class="fps-archive"><a href="index.html" style="text-decoration: none;">FPS ARCHIVE</a></tag> 
-    <tag class="title">"ECHO" 2023</tag>
-    <tag class="title2">"METAMORPHOSE" 2022</tag>
-    <tag class="title3">"AFTER US COMES THE FLOOD" 2022</tag>
-    <tag class="title4">"TORN" 2021</tag>
-    <tag class="title5">"INTERCHANGE" 2022</tag>
-    <tag class="title6">"HOME FOR CHRISTMAS" 2022</tag>
-    <tag class="title7">"EIN SELTEN ENTSTAUBTER TEIL DES GEHIRNS" 2023</tag>
-    <tag class="title8">"ALLES IST HIN" 2022</tag>
-    <tag class="title9">"LULLABY" 2022</tag>
-    <tag class="title10">"BESSER SO" 2023</tag>
-    <tag class="contact"><a href="contact.html" style="text-decoration: none;">ABOUT</a></tag>
+    <tag class="fps-archive"><a href="C:\Users\Ivan\Desktop\filmarchive\index.html" style="text-decoration: none;">FPS Archive</a></tag> 
+    <tag class="title">“Echo” 2023</tag>
+    <tag class="title2">“Metamorphose” 2022</tag>
+    <tag class="title3">“Das Ende vom Ende der Welt” 2022</tag>
+    <tag class="title4">“Metamorphose” 2022</tag>
+    <tag class="title5">“Torn” 2021</tag>
+    <tag class="title6">“Heim ist wo die Narben sind” 2020</tag>
+    <tag class="title7">“Ich melde mich” 2022</tag>
+    <tag class="title8">“After us comes the flood” 2022</tag>
+    <tag class="title9">“After us comes the flood” 2022</tag>
+    <tag class="title10">“Echo” 2023</tag>
+    <tag class="title11">“Home for Christmas” 2022</tag>
+    <tag class="title12">“I/ME” 2023</tag>
+    <tag class="title13">“Ein selten entstaubter Teil des Gehirns”</tag>
+    <tag class="title14">“Traces in the Forest” 2022</tag>
+    <tag class="title15">“Alles ist hin” 2022</tag>
+    <tag class="title16">“Interchange” 2022</tag>
+    <tag class="title17">“Lullaby” 2022</tag>
+    <tag class="title18">“Ein selten entstaubter Teil des Gehirns”</tag>
+    <tag class="title19">“Wer wir einmal sein wollten” 2023</tag>
+    <tag class="title20">“Das Ende vom Ende der Welt” 2022</tag>
+    <tag class="title21">“Interchange” 2022</tag>
+    <tag class="title22">“Die Sänger” 2024</tag>
+    <tag class="title23">“Besser So” 2023</tag>
+
+
+    
+    <tag class="contact"><a href="C:\Users\Ivan\Desktop\filmarchive\contact.html" style="text-decoration: none;">About</a></tag>
 
   </div>
    
     
    
   <div class="hover-container" onmouseover="changeText('01')" onmouseout="restoreText()">
-    <div id="changeable-text" class="right">0.fps</div>
+    <div id="changeable-text" class="right">0FPS</div>
 </div>
 
 
@@ -51,7 +69,7 @@
       // Function to set font size based on screen width
       function setFontSize() {
           var screenWidth = window.innerWidth;
-          var fontSize = screenWidth / 2.3; // You can adjust the divisor to control the ratio of font size to screen width
+          var fontSize = screenWidth / 2.38; // You can adjust the divisor to control the ratio of font size to screen width
           document.getElementById('changeable-text').style.fontSize = fontSize + 'px';
       }
 
@@ -66,7 +84,7 @@
       
         // Function to update the count
         function updateCount() {
-        $('.right').text(count + ".fps");
+        $('.right').text(count + "FPS");
         count++;
         if (count <= fps) {
           setTimeout(updateCount, 1000 / fps); // Update every 1 second divided by fps
@@ -92,7 +110,7 @@
       <script>
         $(document).ready(function() {
             $('#01').hover(function() {
-              $('.title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10').hide();
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
               $('.text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
               $('.title').show();
               $('.text').css('display', 'flex');
@@ -105,8 +123,8 @@
         <script>
           $(document).ready(function() {
               $('#02').hover(function() {
-                  $('.title, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10').hide();
-                  $('.text, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
+                  $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();
+                  $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
                   $('.title2').show();
                   $('.text2').css('display', 'flex');
               });
@@ -115,13 +133,12 @@
       
     </div>
     <div class="column" id="03">
-      <div class="trigger-container" onmouseover="triggerTextChange('03')" onmouseout="restoreText()"><img src="images/after_us_comes2.jpg" alt="gg"></div>
+      <div class="trigger-container" onmouseover="triggerTextChange('03')" onmouseout="restoreText()"><img src="images/das_ende.gif" alt="gg"></div>
       <script>
         $(document).ready(function() {
             $('#03').hover(function() {
-              $('.title, .title2, .title4, .title5, .title6, .title7, .title8, .title9, .title10').hide();
-              $('.text, .text2, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-                $('.title3').show();
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();
+              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();                $('.title3').show();
                 $('.text3').css('display', 'flex');
             });
         });
@@ -132,9 +149,8 @@
       <script>
         $(document).ready(function() {
             $('#04').hover(function() {
-              $('.title, .title2, .title4, .title3, .title5, .title6, .title7, .title8, .title9, .title10').hide();
-            $('.text, .text2, .text3, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-                $('.title2').show();
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();
+              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();                $('.title4').show();
                 $('.text4').css('display', 'flex');
             });
         });
@@ -145,22 +161,20 @@
     <script>
       $(document).ready(function() {
           $('#05').hover(function() {
-              $('.title, .title2, .title3,  .title5, .title6, .title7, .title8, .title9, .title10').hide();
-              $('.text, .text2, .text3, .text4, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-              $('.title4').show();
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();
+              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();              $('.title5').show();
               $('.text5').css('display', 'flex');
           });
       });
   </script>
     </div>
     <div class="column" id="06">
-      <div class="trigger-container" onmouseover="triggerTextChange('06')" onmouseout="restoreText()"><img src="images/Interchange_Sebastian_Dorner.gif" alt="gg"></div>
+      <div class="trigger-container" onmouseover="triggerTextChange('06')" onmouseout="restoreText()"><img src="images/Florian_ Engelhardt.jpg" alt="gg"></div>
       <script>
         $(document).ready(function() {
             $('#06').hover(function() {
-                $('.title, .title2, .title3, .title4, .title6, .title7, .title8, .title9, .title10').hide();
-                $('.text, .text2, .text3, .text4, .text5, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-                $('.title5').show();
+                $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();
+                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();                $('.title6').show();
                 $('.text6').css('display', 'flex');
             });
         });
@@ -168,27 +182,25 @@
     </div>
     
     <div class="column" id="07">
-      <div class="trigger-container" onmouseover="triggerTextChange('07')" onmouseout="restoreText()"><img src="image5.jpg" alt="gg"></div>
+      <div class="trigger-container" onmouseover="triggerTextChange('07')" onmouseout="restoreText()"><img src="images/ich_melde_mich.jpg" alt="gg"></div>
       <script>
         $(document).ready(function() {
             $('#07').hover(function() {
-                $(' .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10').hide();
-                $('.text, .text2, .text3, .text4, .text5, .text6, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-                $('.title').show();
+                $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();
+                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();                $('.title7').show();
                 $('.text7').css('display', 'flex');
             });
         });
     </script>
     </div>
     <div class="column" id="08">
-      <div class="trigger-container" onmouseover="triggerTextChange('08')" onmouseout="restoreText()"><img src="images/after_us_comes.jpg" alt="gg"></div>
+      <div class="trigger-container" onmouseover="triggerTextChange('08')" onmouseout="restoreText()"><img src="images/after_us_comes.gif" alt="gg"></div>
       <script>
         $(document).ready(function() {
             $('#08').hover(function() {
-                $('.title, .title2, .title4, .title5, .title6, .title7, .title8, .title9, .title10').hide();
-                $('.text, .text2, .text8, .text4, .text5, .text6, .text7,  .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-                $('.title3').show();
-                $('.text3').css('display', 'flex');
+                $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();
+                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();                $('.title8').show();
+                $('.text8').css('display', 'flex');
             });
         });
     </script>
@@ -198,10 +210,9 @@
       <script>
         $(document).ready(function() {
             $('#09').hover(function() {
-                $('.title, .title2, .title4, .title5, .title6, .title7, .title8, .title9, .title10').hide();
-                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-                $('.title3').show();
-                $('.text8').css('display', 'flex');
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();
+              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();                $('.title9').show();
+                $('.text9').css('display', 'flex');
             });
         });
     </script>
@@ -212,10 +223,10 @@
       <script>
         $(document).ready(function() {
             $('#10').hover(function() {
-                $('.title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10').hide();
-                $('.text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-                $('.title').show();
-                $('.text').css('display', 'flex');
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();                
+              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title10').show();
+                $('.text10').css('display', 'flex');
             });
         });
     </script>
@@ -225,40 +236,47 @@
       <script>
         $(document).ready(function() {
             $('#11').hover(function() {
-                $('.title, .title2, .title3, .title4, .title5, .title7, .title8, .title9, .title10').hide();
-                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-                $('.title6').show();
-                $('.text9').css('display', 'flex');
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();               
+              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title11').show();
+                $('.text11').css('display', 'flex');
             });
         });
     </script>
     </div>
     <div class="column" id="12">
-      <div class="trigger-container" onmouseover="triggerTextChange('12')" onmouseout="restoreText()"><img src="images/image10.png" alt="gg"></div>
-      </div>
+      <div class="trigger-container" onmouseover="triggerTextChange('12')" onmouseout="restoreText()"><img src="images/I_ME_Poster.png" alt="gg"></div>
+      <script>
+        $(document).ready(function() {
+            $('#12').hover(function() {
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+                $('.title12').show();
+                $('.text12').css('display', 'flex');
+            });
+        });
+    </script>
+    </div>
     <div class="column" id="13">
       
       <div class="trigger-container" onmouseover="triggerTextChange('13')" onmouseout="restoreText()"><img src="images/image11.jpg" alt="gg"></div>
       <script>
         $(document).ready(function() {
             $('#13').hover(function() {
-                $('.title, .title2, .title3, .title4, .title5, .title6, .title8, .title9, .title10').hide();
-                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9,  .text11, .text12, .text13, .text14, .text15').hide();
-                $('.title7').show();
-                $('.text10').css('display', 'flex');
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+                $('.title13').show();
+                $('.text13').css('display', 'flex');
             });
         });
     </script>
     </div>
     <div class="column" id="14">
-      <div class="trigger-container" onmouseover="triggerTextChange('14')" onmouseout="restoreText()"><img src="images/TORN_createdbyElisabethBüchner.jpg" alt="gg"></div>
+      <div class="trigger-container" onmouseover="triggerTextChange('14')" onmouseout="restoreText()"><img src="images/tracesintheforest Kopie.jpg" alt="gg"></div>
       <script>
         $(document).ready(function() {
             $('#14').hover(function() {
-                $('.title, .title2, .title3, .title5, .title6, .title7, .title8, .title9, .title10').hide();
-                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text12, .text13, .text14, .text15').hide();
-                $('.title4').show();
-                $('.text11').css('display', 'flex');
+              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();                $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+                $('.title14').show();
+                $('.text14').css('display', 'flex');
             });
         });
     </script>
@@ -269,10 +287,9 @@
     <script>
       $(document).ready(function() {
           $('#15').hover(function() {
-              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title9, .title10').hide();
-              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text13, .text14, .text15').hide();
-              $('.title8').show();
-              $('.text12').css('display', 'flex');
+            $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title15').show();
+              $('.text15').css('display', 'flex');
           });
       });
   </script>
@@ -282,10 +299,9 @@
     <script>
       $(document).ready(function() {
           $('#16').hover(function() {
-              $('.title, .title2, .title3, .title4,.title6, .title7, .title8, .title9, .title10').hide();
-              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text14, .text15').hide();
-              $('.title5').show();
-              $('.text13').css('display', 'flex');
+            $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title16').show();
+              $('.text16').css('display', 'flex');
           });
       });
   </script>
@@ -295,10 +311,9 @@
     <script>
       $(document).ready(function() {
           $('#17').hover(function() {
-              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title10').hide();
-              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text15').hide();
-              $('.title9').show();
-              $('.text14').css('display', 'flex');
+            $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title17').show();
+              $('.text17').css('display', 'flex');
           });
       });
   </script>
@@ -308,65 +323,69 @@
     <script>
       $(document).ready(function() {
           $('#18').hover(function() {
-              $('.title, .title2, .title3, .title4, .title5, .title6, .title8, .title9, .title10').hide();
-              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9,  .text11, .text12, .text13, .text14, .text15').hide();
-              $('.title7').show();
-              $('.text10').css('display', 'flex');
+            $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title18').show();
+              $('.text18').css('display', 'flex');
           });
       });
   </script>
   </div>
   <div class="column" id="19">
-    <div class="trigger-container" onmouseover="triggerTextChange('19')" onmouseout="restoreText()"><img src="images/Torn_createdbySinaMadreiter.jpg" alt="gg"></div>
+    <div class="trigger-container" onmouseover="triggerTextChange('19')" onmouseout="restoreText()"><img src="images/RichardParmentier.jpg" alt="gg"></div>
     <script>
       $(document).ready(function() {
           $('#19').hover(function() {
-              $('.title, .title2, .title3,  .title5, .title6, .title7, .title8, .title9, .title10').hide();
-              $('.text, .text2, .text3, .text4, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-              $('.title4').show();
-              $('.text5').css('display', 'flex');
+            $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();             $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title19').show();
+              $('.text19').css('display', 'flex');
           });
       });
   </script>
   </div>
   <div class="column" id="20">
-    <div class="trigger-container" onmouseover="triggerTextChange('20')" onmouseout="restoreText()"><img src="images/ECHO_createdbyElisabethBüchner.jpg" alt="gg"></div>
+    <div class="trigger-container" onmouseover="triggerTextChange('20')" onmouseout="restoreText()"><img src="images/MarkusBader.jpg" alt="gg"></div>
     <script>
       $(document).ready(function() {
           $('#20').hover(function() {
-              $(' .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10').hide();
-              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10,  .text12, .text13, .text14, .text15').hide();
-              $('.title').show();
-              $('.text11').css('display', 'flex');
+            $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title20').show();
+              $('.text20').css('display', 'flex');
           });
       });
   </script>
   </div>
   <div class="column" id="21">
-    <div class="trigger-container" onmouseover="triggerTextChange('21')" onmouseout="restoreText()"><img src="images/interchange_mohammed.gif" alt="gg"></div>
+    <div class="trigger-container" onmouseover="triggerTextChange('21')" onmouseout="restoreText()"><img src="images/interchange_m.gif" alt="gg"></div>
     <script>
       $(document).ready(function() {
           $('#21').hover(function() {
-              $('.title, .title2, .title3, .title4, .title6, .title7, .title8, .title9, .title10').hide();
-              $('.text, .text2, .text3, .text4, .text5, .text6, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15').hide();
-              $('.title5').show();
-              $('.text7').css('display', 'flex');
+            $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title21').show();
+              $('.text21').css('display', 'flex');
           });
       });
   </script>
   </div>
   <div class="column" id="22">
-    <div class="trigger-container" onmouseover="triggerTextChange('22')" onmouseout="restoreText()"><img src="images/Interchange_Katjairger.gif" alt="gg"></div>
+    <div class="trigger-container" onmouseover="triggerTextChange('22')" onmouseout="restoreText()"><img src="images/sanger.gif" alt="gg"></div>
+    <script>
+      $(document).ready(function() {
+          $('#22').hover(function() {
+            $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title22').show();
+              $('.text22').css('display', 'flex');
+          });
+      });
+  </script>
   </div>
-  <div class="column" id="23">
+  <div class="column" id="23" style="margin-right: 0px;">
     <div class="trigger-container" onmouseover="triggerTextChange('23')" onmouseout="restoreText()"><img src="image9.jpg" alt="gg"></div>
     <script>
       $(document).ready(function() {
           $('#23').hover(function() {
-              $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9').hide();
-              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14').hide();
-              $('.title10').show();
-              $('.text15').css('display', 'flex');
+            $('.title, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10, .title11, .title12, .title13, .title14, .title15, .title16, .title17, .title18, .title19, .title20, .title21, .title22, .title23').hide();              $('.text, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9, .text10, .text11, .text12, .text13, .text14, .text15, .text16, .text17, .text18, .text19, .text20, .text21, .text22, .text23').hide();
+              $('.title23').show();
+              $('.text23').css('display', 'flex');
           });
       });
   </script>
@@ -378,52 +397,153 @@
 
 
 </div> 
+<div class="swiper-container mobile-gallery">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" id="01"><img src="image5_50.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="02"><img src="image33.png" alt="gg"></div>
+    <!-- Add more slides as needed -->
+    <div class="swiper-slide" id="03"><img src="images/das_ende.gif" alt="gg"></div>
+    <div class="swiper-slide" id="04"><img src="image6.gif" alt="gg"></div>
+    <div class="swiper-slide" id="05"><img src="image7.jpg" alt="Poster"></div>
+    <div class="swiper-slide" id="06"><img src="images/Florian_ Engelhardt.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="07"><img src="images/ich_melde_mich.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="08"><img src="images/after_us_comes.gif" alt="gg"></div>
+    <div class="swiper-slide" id="09"><img src="images/after_us_comes_3_Bemir Bilalic.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="10"><img src="image4_20.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="11"><img src="images/homeforchristmas_sina.gif" alt="gg"></div>
+    <div class="swiper-slide" id="12"><img src="images/I_ME_Poster.png" alt="gg"></div>
+    <div class="swiper-slide" id="13"><img src="images/image11.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="14"><img src="images/tracesintheforest Kopie.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="15"><img src="images/thumbnail_miriam_haefele_alles_ist_hin.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="16"><img src="images/interchange_johanna.gif" alt="gg"></div>
+    <div class="swiper-slide" id="17"><img src="images/miriam_haefele_Lullaby_animiert.gif" alt="gg"></div>
+    <div class="swiper-slide" id="18"><img src="images/image12.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="19"><img src="images/RichardParmentier.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="20"><img src="images/MarkusBader.jpg" alt="gg"></div>
+    <div class="swiper-slide" id="21"><img src="images/interchange_m.gif" alt="gg"></div>
+    <div class="swiper-slide" id="22"><img src="images/sanger.gif" alt="gg"></div>
+    <div class="swiper-slide" id="23"><img src="image9.jpg" alt="gg"></div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Add this script after Swiper initialization -->
+<script>
+  $(document).ready(function() {
+    // Initialize Swiper for mobile
+    var swiper = new Swiper('.mobile-gallery', {
+      loop: false, // Disable loop
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // Add slide change event handler
+      on: {
+        slideChange: function() {
+          // Hide texts and titles from the previous slide
+          var previousSlide = this.previousIndex + 1;
+          $('.title' + previousSlide + ', .text' + previousSlide).hide();
+          
+          // Show title and text for the current slide
+          var currentSlide = this.activeIndex + 1;
+          $('.title' + currentSlide + ', .text' + currentSlide).show();
+        },
+      },
+      preventClicksPropagation: true, // Prevent clicks propagation
+    });
+
+    // Initial setup for the first slide
+    // Show title and text for the first slide
+    $('.title1, .text1').show();
+  });
+</script>
+
+
+
+
+
+
 <div class="container2">
- <div class="text2">
+ 
+<div class="text">
+  <div class="name"><tag class="type">Poster Design </tag><a href="https://www.instagram.com/_ksparluks/">Lucas Hoffmann</a></div> <div class="name"><tag class="type">Director </tag>Thomas Marciano</div><div class="name"><tag class="type">Producer </tag>Elahe Aman</div><div class="name"><tag class="type">Cameraman </tag>Benjamin Pieber</div><div class="name"><tag class="type">Set Design </tag>Verena Gross</div><div class="name"><tag class="type">Costume Design </tag>Ruth Erharter</div><div class="name"><tag class="type">Musik </tag>Raimund Hepp</div>
+</div>
+<div class="text2">
   <div class="name"><tag class="type">Poster Design </tag><a href="https://www.instagram.com/timm.felder/">Timm Felder</a></div> <div class="name"><tag class="type">Director </tag><a href="https://www.felixkrisai.com/">Felix Krisai & Pipi Fröstl</a></div><div class="name"><tag class="type">Producer </tag>Sebastian Brameshuber</div><div class="name"><tag class="type">Cameraman </tag>Lukas Köchler</div><div class="name"><tag class="type">Set Design </tag>Johanna Mitulla</div><div class="name"><tag class="type">Costume Design </tag><a href="https://elenakreuzberger.com/">Elena Kreuzberger</a></div><div class="name"><tag class="type">Sound Design </tag>Nikolaus Gehrer</div>
 </div>
-<div class="text">
-  <div class="name"><tag class="type">Poster Design </tag><a href="https://www.instagram.com/_ksparluks/">Lucas Hoffmann</a></div> <div class="name"><tag class="type">Director </tag>Thomas Marciano</div><div class="name"><tag class="type">Producer </tag>Elahe Aman</div><div class="name"><tag class="type">Cameraman </tag>Benjamin Pieber</div><div class="name"><tag class="type">Set Design </tag>Verena Gross</div><div class="name"><tag class="type">Costume Design </tag>Ruth Erharter</div><div class="name"><tag class="type">Sound Design </tag>Alexander Siegl & Alessio Bertoldi</div><div class="name"><tag class="type">Musik </tag>Raimund Hepp</div>
-</div>
 <div class="text3">
-  <div class="name"><tag class="type">Poster Design </tag><a href="https://www.andreahausmann.com/">Andrea Hausmann</a></div> <div class="name"><tag class="type">Director </tag>Laurence Trottier</div><div class="name"><tag class="type">Producer </tag>	Lena Zechner</div><div class="name"><tag class="type">Hauptdarsteller </tag>Joshua Jagersberger</div>
+  <div class="name"><tag class="type">Poster Design </tag>Richard Parmentier</div> <div class="name"><tag class="type">Director </tag> Meike Wüstenberg</div><div class="name"><tag class="type">Producer </tag>	Flora Mair</div><div class="name"><tag class="type">Kamera</tag>Anna Rußmann</div><div class="name"><tag class="type">Drehbuch</tag>Sarah Hichri</div>
 </div>
+
 <div class="text4">
-  <div class="name"><tag class="type">Poster Design </tag><a href="https://sukhov.xyz/">Ivan Sukhov</a></div><div class="name"><tag class="type">Director </tag><a href="https://www.felixkrisai.com/">Felix Krisai & Pipi Fröstl</a></div><div class="name"><tag class="type">Producer </tag>Sebastian Brameshuber</div><div class="name"><tag class="type">Cameraman </tag>Lukas Köchler</div><div class="name"><tag class="type">Set Design </tag>Johanna Mitulla</div><div class="name"><tag class="type">Costume Design </tag><a href="https://elenakreuzberger.com/">Elena Kreuzberger</a></div><div class="name"><tag class="type">Sound Design </tag>Nikolaus Gehrer</div>
+  <div class="name"><tag class="type">Poster Design </tag><a href="https://sukhov.xyz/">Ivan Sukhov</a></div><div class="name"><tag class="type">Director </tag><a href="https://www.felixkrisai.com/">Felix Krisai & Pipi Fröstl</a></div><div class="name"><tag class="type">Producer </tag>Sebastian Brameshuber</div><div class="name"><tag class="type">Cameraman </tag>Lukas Köchler</div><div class="name"><tag class="type">Set Design </tag>Johanna Mitulla</div><div class="name"><tag class="type">Costume Design </tag><a href="https://elenakreuzberger.com/">Elena Kreuzberger</a></div>
 </div>
 <div class="text5">
-  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:sinaida.madreiter@kunstuni-linz.at">Sinaida Madreiter</a></div><div class="name"><tag class="type">Director </tag><a href="https://simonehart.com/">Simone Hart & Jón H. Geirfinnsson</a></div><div class="name"><tag class="type">Producer </tag>Jakob Widmann</div><div class="name"><tag class="type">Cameraman </tag>Simone Hart</div><div class="name"><tag class="type">Montage </tag>Andreas Moser</div><div class="name"><tag class="type">Musik/Ton </tag>Jón H. Geirfinnsson</div><div class="name"><tag class="type">Colorist </tag>Manuel Portschy</div>
+  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:sinaida.madreiter@kunstuni-linz.at">Sinaida Madreiter</a></div><div class="name"><tag class="type">Director </tag><a href="https://simonehart.com/">Simone Hart & Jón H. Geirfinnsson</a></div><div class="name"><tag class="type">Producer </tag>Jakob Widmann</div><div class="name"><tag class="type">Cameraman </tag>Simone Hart</div><div class="name"><tag class="type">Montage </tag>Andreas Moser</div><div class="name"><tag class="type">Musik/Ton </tag>Jón H. Geirfinnsson</div>
 </div>
 <div class="text6">
-  <div class="name"><tag class="type">Poster Design </tag><a href="https://www.instagram.com/se_wasserspinat/">Sebastian Dorner</a></div><div class="name"><tag class="type">Director </tag>José Camargo</div><div class="name"><tag class="type">Producer </tag>Sophie Tschach</div><div class="name"><tag class="type">Cameraman </tag>Chris Poulles & Michael Cao</div><div class="name"><tag class="type">Montage </tag>Hanna Hofstätter</div><div class="name"><tag class="type">Sound Design </tag>Fabian Hainzl</div><div class="name"><tag class="type">Costume Design </tag>Oliver Huber</div>
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
+ 
 </div>
+
+
 <div class="text7">
-  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:mohammed.bhuyian@kunstuni-linz.at">Bhuyian Mohammed</a></div> <div class="name"><tag class="type">Director </tag>Thomas Marciano</div><div class="name"><tag class="type">Producer </tag>Elahe Aman</div><div class="name"><tag class="type">Cameraman </tag>Benjamin Pieber</div><div class="name"><tag class="type">Set Design </tag>Verena Gross</div><div class="name"><tag class="type">Costume Design </tag>Ruth Erharter</div><div class="name"><tag class="type">Sound Design </tag>Alexander Siegl & Alessio Bertoldi</div><div class="name"><tag class="type">Musik </tag>Raimund Hepp</div>
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
 </div>
 <div class="text8">
-  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:b.bemir@hotmail.com">Bemir Bilalic</a></div><div class="name"><tag class="type">Director </tag>Laurence Trottier</div><div class="name"><tag class="type">Producer </tag>	Lena Zechner</div><div class="name"><tag class="type">Hauptdarsteller </tag>Joshua Jagersberger</div>
+  <div class="name"><tag class="type">Poster Design </tag>Andrea Hausmann</div><div class="name"><tag class="type">Director </tag>Laurence Trottier</div><div class="name"><tag class="type">Producer </tag>	Lena Zechner</div><div class="name"><tag class="type">Hauptdarsteller </tag>Joshua Jagersberger</div>
 </div>
 <div class="text9">
-  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:sinaida.madreiter@kunstuni-linz.at">Sinaida Madreiter</a></div><div class="name"><tag class="type">Director </tag><a href="https://www.schaefersphilippen.de/kuenstler_in/cosmea-spelleken/">Cosmea Spelleken</a></div><div class="name"><tag class="type">Producer </tag>Florian Noever & Nick Pasveer</div><div class="name"><tag class="type">Cameraman </tag>Florian Noever</div><div class="name"><tag class="type">Montage </tag>Alexander Worsch & Magdalena Steiner</div><div class="name"><tag class="type">Ton </tag>Anton Vertipolock & Alex Siegel</div>
+  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:b.bemir@hotmail.com">Bemir Bilalic</a></div><div class="name"><tag class="type">Director </tag>Laurence Trottier</div><div class="name"><tag class="type">Producer </tag>	Lena Zechner</div><div class="name"><tag class="type">Hauptdarsteller </tag>Joshua Jagersberger</div>
 </div>
+
 <div class="text10">
-  <div class="name"><tag class="type">Poster Design </tag><a href="https://dabinkim.com/">Dabin Kim</a></div><div class="name"><tag class="type">Director </tag>Luzia Johow</div><div class="name"><tag class="type">Producer </tag>	Flora Mair</div><div class="name"><tag class="type">Cameraman </tag>Albert Car & Stella-Joya Puelacher</div><div class="name"><tag class="type">Montage </tag>Melisa Krasniqi</div><div class="name"><tag class="type">Sound Design </tag>Lisa Maria Hollaus</div><div class="name"><tag class="type">Music </tag>Xavier Weydert</div>
+  <div class="name"><tag class="type">Poster Design </tag><a href="https://www.instagram.com/_ksparluks/">Lucas Hoffmann</a></div> <div class="name"><tag class="type">Director </tag>Thomas Marciano</div><div class="name"><tag class="type">Producer </tag>Elahe Aman</div><div class="name"><tag class="type">Cameraman </tag>Benjamin Pieber</div><div class="name"><tag class="type">Set Design </tag>Verena Gross</div><div class="name"><tag class="type">Costume Design </tag>Ruth Erharter</div><div class="name"><tag class="type">Musik </tag>Raimund Hepp</div>
 </div>
 <div class="text11">
-  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:elisabeth.buechner@kunstuni-linz.at">Elisabeth Büchner</a></div><div class="name"><tag class="type">Director </tag><a href="https://simonehart.com/">Simone Hart & Jón H. Geirfinnsson</a></div><div class="name"><tag class="type">Producer </tag>Jakob Widmann</div><div class="name"><tag class="type">Cameraman </tag>Simone Hart</div><div class="name"><tag class="type">Montage </tag>Andreas Moser</div><div class="name"><tag class="type">Musik/Ton </tag>Jón H. Geirfinnsson</div><div class="name"><tag class="type">Colorist </tag>Manuel Portschy</div>
+  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:sinaida.madreiter@kunstuni-linz.at">Sinaida Madreiter</a></div><div class="name"><tag class="type">Director </tag><a href="https://www.schaefersphilippen.de/kuenstler_in/cosmea-spelleken/">Cosmea Spelleken</a></div><div class="name"><tag class="type">Producer </tag>Florian Noever & Nick Pasveer</div><div class="name"><tag class="type">Cameraman </tag>Florian Noever</div><div class="name"><tag class="type">Montage </tag>Alexander Worsch & Magdalena Steiner</div><div class="name"><tag class="type">Ton </tag>Anton Vertipolock & Alex Siegel</div>
 </div>
 <div class="text12">
-  <div class="name"><tag class="type">Poster Design </tag><a href="https://miriamhaefele.de/">Miriam Häfele</a></div><div class="name"><tag class="type">Director </tag><a href="https://www.janprazak.com/">Jan Prazak</a></div><div class="name"><tag class="type">Producer </tag>Flora Mair</div><div class="name"><tag class="type">Cameraman </tag>Johannes Hoss</div><div class="name"><tag class="type">Montage </tag>Barbara Seidler</div><div class="name"><tag class="type">Ton </tag>Joseph Mittermeier</div><div class="name"><tag class="type">Sound Design </tag>Daniel Rutz</div>
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
 </div>
 <div class="text13">
-  <div class="name"><tag class="type">Poster Design </tag><a href="https://www.johannaheller.com/">Johanna Heller</a></div><div class="name"><tag class="type">Director </tag>José Camargo</div><div class="name"><tag class="type">Producer </tag>Sophie Tschach</div><div class="name"><tag class="type">Cameraman </tag>Chris Poulles & Michael Cao</div><div class="name"><tag class="type">Montage </tag>Hanna Hofstätter</div><div class="name"><tag class="type">Sound Design </tag>Fabian Hainzl</div><div class="name"><tag class="type">Costume Design </tag>Oliver Huber</div>
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
 </div>
 <div class="text14">
-  <div class="name"><tag class="type">Poster Design </tag><a href="https://miriamhaefele.de/">Miriam Häfele</a></div><div class="name"><tag class="type">Director </tag><a href="https://magda.vision/">Magdalena Chmielewska</a></div><div class="name"><tag class="type">Producer </tag>Saskia Arth</div><div class="name"><tag class="type">Cameraman </tag>Manuel Prett</div><div class="name"><tag class="type">Montage </tag>Luzia Johow</div><div class="name"><tag class="type">Sound Mix </tag>Sophie Wasserburger & Luzia Johow</div><div class="name"><tag class="type">Costume Design </tag>Avelina Götz</div>
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
 </div>
 <div class="text15">
-  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:daryna.bondarenko@kunstuni-linz.at">Darina Bondorenko</a></div><div class="name"><tag class="type">Director </tag>Lotta Schweikert</div><div class="name"><tag class="type">Producer </tag>Ivet Castelo</div><div class="name"><tag class="type">Cameraman </tag>Anna Viola Haderer</div><div class="name"><tag class="type">Montage </tag>Paul Eckhart</div><div class="name"><tag class="type">Ton </tag>Jon Geirfinnsson</div><div class="name"><tag class="type">Costume Design </tag>Rita Landgrebe</div><div class="name"><tag class="type">Set Design </tag>Sabine Müller & Laura Diessl</div>
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
 </div>
+<div class="text16">
+  <div class="name"><tag class="type">Poster Design </tag><a href="https://www.johannaheller.com/">Johanna Heller</a></div><div class="name"><tag class="type">Director </tag>José Camargo</div><div class="name"><tag class="type">Producer </tag>Sophie Tschach</div><div class="name"><tag class="type">Cameraman </tag>Chris Poulles & Michael Cao</div><div class="name"><tag class="type">Montage </tag>Hanna Hofstätter</div><div class="name"><tag class="type">Sound Design </tag>Fabian Hainzl</div><div class="name"><tag class="type">Costume Design </tag>Oliver Huber</div>
+</div>
+<div class="text17">
+  <div class="name"><tag class="type">Poster Design </tag><a href="https://miriamhaefele.de/">Miriam Häfele</a></div><div class="name"><tag class="type">Director </tag><a href="https://magda.vision/">Magdalena Chmielewska</a></div><div class="name"><tag class="type">Producer </tag>Saskia Arth</div><div class="name"><tag class="type">Cameraman </tag>Manuel Prett</div><div class="name"><tag class="type">Montage </tag>Luzia Johow</div><div class="name"><tag class="type">Sound Mix </tag>Sophie Wasserburger & Luzia Johow</div><div class="name"><tag class="type">Costume Design </tag>Avelina Götz</div>
+</div>
+<div class="text18">
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
+</div>
+<div class="text19">
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
+</div>
+<div class="text20">
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
+</div>
+<div class="text21">
+  <div class="name"><tag class="type">Poster Design </tag><a href="https://www.instagram.com/mdfarhan10694/">Mohammed Bhuyian</a></div><div class="name"><tag class="type">Director </tag>José Camargo</div><div class="name"><tag class="type">Producer </tag>Sophie Tschach</div><div class="name"><tag class="type">Cameraman </tag>Chris Poulles & Michael Cao</div><div class="name"><tag class="type">Montage </tag>Hanna Hofstätter</div><div class="name"><tag class="type">Sound Design </tag>Fabian Hainzl</div><div class="name"><tag class="type">Costume Design </tag>Oliver Huber</div>
+</div>
+<div class="text22">
+  <div class="name"><tag class="type">Poster Design </tag>Vorname Nachname</div><div class="name"><tag class="type">Director </tag>Vorname Nachname</div><div class="name"><tag class="type">Producer </tag>Vorname Nachname</div><div class="name"><tag class="type">Hauptdarsteller </tag>Vorname Nachname</div><div class="name"><tag class="type">Cameraman </tag>Vorname Nachname</div>
+</div>
+<div class="text23">
+  <div class="name"><tag class="type">Poster Design </tag><a href="mailto:daryna.bondarenko@kunstuni-linz.at">Darina Bondorenko</a></div><div class="name"><tag class="type">Director </tag>Lotta Schweikert</div><div class="name"><tag class="type">Producer </tag>Ivet Castelo</div><div class="name"><tag class="type">Cameraman </tag>Anna Viola Haderer</div><div class="name"><tag class="type">Montage </tag>Paul Eckhart</div><div class="name"><tag class="type">Ton </tag>Jon Geirfinnsson</div><div class="name"><tag class="type">Set Design </tag>Sabine Müller & Laura Diessl</div>
+</div>
+
+
+
+
 
 
 
