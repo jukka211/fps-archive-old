@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metamorphose</title>
+  <link rel="stylesheet" href="style_p_metamorphose - Copy.css">
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+   
+</head>
+<body>
+  <div class="information">
+    <tag class="fps-archive">FPS Archive</tag> 
+    <tag class="title0">"METAMORPHOSE" 2022</tag><tag class="title2">"BESSER SO" 2021</tag>
+    <tag class="contact">Contact</tag>
+  </div>
+
+  <div class="null">
+  <div class="vertical-line" id="cursor-line"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const cursorLine = document.getElementById('cursor-line');
+
+  document.addEventListener('mousemove', function (event) {
+      const mouseX = event.clientX;
+      cursorLine.style.left = mouseX + 'px';
+  });
+});
+  </script>
+
+  <div id="container">
+      <div class="pic"><img src="image1.jpg" alt="gg"></div>
+      
+      <div class="Text">
+        <div class="title">Poster Design</div><div class="name"><a href="https://www.instagram.com/timm.felder/">Timm Felder</a></div>
+        
+      <div class="title">Director</div><div class="name"><a href="https://www.felixkrisai.com/">Felix Krisai & Pipi Fröstl</a></div>
+      <div class="title">Producer</div><div class="name">Sebastian Brameshuber</div>
+      <div class="title">Production Manager<br></div><div class="name">Selina Nenning & Michael Schäffer</div>
+      <div class="title">Picture Design<br></div><div class="name"><a href="https://maxsmoliner.com/">Maximilian Smoliner</a></div>
+      <div class="title">Cameraman<br></div><div class="name">Lukas Köchler</div>
+      
+      <div class="title">Gaffer<br></div><div class="name">Michael Preston</div>
+      <div class="title">Set Design<br></div><div class="name">Johanna Mitulla</div>
+      <div class="title">Costume Design<br></div><div class="name"><a href="https://elenakreuzberger.com/">Elena Kreuzberger</a></div>
+      <div class="title">Film Music Composition<br></div><div class="name">Felix Krisai</div>
+      <div class="title"> Film Music Arrangement<br></div><div class="name">Noemi Haffner</div>
+      <div class="title">Montage<br></div><div class="name">Barbara Seidler</div>
+      <div class="title">Sound Design<br></div><div class="name">Nikolaus Gehrer</div>
+      
+
+
+
+
+      
+      
+      
+      
+      </div>
+      </div>
+    </div>
+      <script>
+        // Function to handle mouse wheel events
+        function handleMouseWheel(event) {
+            // Cross-browser wheel delta
+            var e = window.event || event;
+            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+            
+            // Get the container element
+            var container = document.getElementById('container');
+            
+            // Adjust scrollLeft based on wheel delta
+            container.scrollLeft -= (delta * 90); // Adjust scroll speed as needed
+        }
+        
+        // Add event listener for mouse wheel
+        if (document.addEventListener) {
+            // For modern browsers
+            document.addEventListener('mousewheel', handleMouseWheel, false);
+            document.addEventListener('DOMMouseScroll', handleMouseWheel, false);
+        } else {
+            // For older versions of IE
+            document.attachEvent('onmousewheel', handleMouseWheel);
+        }
+    </script>
+    
+      
+    
+
+  
+
+  
+</body>
+</html>

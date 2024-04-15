@@ -1,0 +1,141 @@
+@font-face {
+  font-family:TexGyreHeros;
+  src: url("texgyreheros.gyreheros-regular.otf");
+}
+@font-face {
+  font-family:TexGyreHerosBold;
+  src: url("texgyreheros.gyreheros-bold.otf");
+}
+@font-face {
+  font-family:TexGyreHerosCondensed;
+  src: url("texgyreheros.gyreheroscondensed-regular.otf");
+}
+@font-face {
+  font-family:TexGyreHerosCondensed-Italic;
+  src: url("texgyreheros.gyreheroscondensed-italic.otf");
+}
+
+
+
+body {
+ 
+  
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+        
+  
+  background-color: rgb(0, 0, 0);
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow-y: hidden;
+ 
+}
+.null {
+  display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+#container {
+ 
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  
+ 
+}
+.title {
+  padding-top: 10px;
+  margin-right: 10px;
+  font-size: 12pt;
+  line-height: 14pt;
+  font-family:TexGyreHerosBold;
+  
+}
+.name {
+  font-family:TexGyreHerosBold;
+  
+  font-size: 64pt;
+  line-height: 64pt;
+ 
+  margin-right: 56px;
+}
+.Text{
+  
+  color: rgb(255, 255, 255);
+ 
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+ 
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+  
+  p{
+    margin: 0;
+    padding-bottom: 24px;
+  }
+  img{
+    text-align: left;
+    height:96vh;
+    
+    
+  }
+  .pic {
+    text-align: left;
+    display: block;
+    position: relative;
+  }
+  a {
+    color: white;
+    text-decoration:underline;
+    text-decoration-thickness: 5.5px;
+   
+  }
+
+  .vertical-line {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: #ffffff; /* Change color as needed */
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+  }
+
+  .information {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+    color: #ffffff;
+    height:auto;
+    
+    font-family:TexGyreHerosBold;
+    font-size: 10pt;
+    line-height: 16pt;
+    
+  }
+  
+  
+  .fps-archive {
+    margin-left: 10px;
+  }
+  .contact {
+    margin-right: 10px;
+  }
+  .title2 {
+    display:none;
+  }
+  
+ 
+  
