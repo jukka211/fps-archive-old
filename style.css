@@ -330,34 +330,36 @@ a{
   .swiper-pagination{
     display: none;
   }
+  
   .swiper-container {
     display: block;
     width: 100%;
     margin: auto;
-    flex: 4;
+    flex: 2;
+    height: auto;
   }
   .swiper-slide {
     text-align: center;
+    height:auto;
   }
   .swiper-slide img {
     width: 100%;
     height: auto;
-    position: absolute; /* Set the position of the image to absolute */
-        bottom: top; /* Align the image to the bottom */
-        left: 0; /* Align the image to the left (adjust as needed) */
-        width: 100%;
+    
+       
   }
   
   body{
     overflow-x: hidden;
   }
  .container{
+  flex:0;
   display: none;
   width:fit-content;
   justify-content:flex-start; /* Align items horizontally in the center */
   flex-direction: row;
   text-align: center;
-  
+ 
   
   overflow-x: hidden;
  }
@@ -397,13 +399,17 @@ a{
     margin-right: 20px;
    }
     .container2{
-      
-      flex:0.2;
+     flex:1;
+      height: auto;
       overflow-x: auto;
       z-index: 999;
-      
+     
+      align-items:flex-start;
+      background-color: #ffffff;
       margin-bottom: 10px;
     }
+    
+   
     .title13, .title18 {
       letter-spacing: -1px;
     }
