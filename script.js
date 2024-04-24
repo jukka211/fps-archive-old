@@ -43,10 +43,10 @@ $(document).ready(function() {
 
       if (windowHeight >= 1500) {
         flexValue = '58';
-      } else if (windowHeight >= 1000) {
+      } else if (windowHeight >= 1200) {
         flexValue = '25';
       } else {
-        flexValue = '20';
+        flexValue = '10';
       }
 
       $('#01, #02, #03, #04, #05, #06, #07, #08, #09, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19, #20, #21, #22, #23').not(this).css('flex', '1');
