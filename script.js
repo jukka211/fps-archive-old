@@ -46,7 +46,7 @@ $(document).ready(function() {
       } else if (windowHeight >= 1000) {
         flexValue = '25';
       } else {
-        flexValue = '23';
+        flexValue = '20';
       }
 
       $('#01, #02, #03, #04, #05, #06, #07, #08, #09, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19, #20, #21, #22, #23').not(this).css('flex', '1');
