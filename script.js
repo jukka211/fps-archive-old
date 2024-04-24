@@ -41,7 +41,7 @@ $(document).ready(function() {
       var flexValue;
 
       if (screenHeight > 1800) {
-        flexValue = Math.round(screenHeight / 1.2); // Use a different value for screens taller than 1800px
+        flexValue = Math.round(screenHeight / 0.5); // Use a different value for screens taller than 1800px
       } else {
         flexValue = Math.round(screenHeight / 1.59); // Default calculation for other screen heights
       }
