@@ -19,7 +19,7 @@
   cursor: none;
 
   position: absolute;
-  font-size: 28pt;
+  
   display: none;
 }
 
@@ -112,7 +112,7 @@ img{
 }
 h4{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 9pt;
+  font-size: 10pt;
   line-height: 0pt;
   font-style: normal;
 }
@@ -140,7 +140,7 @@ h4{
   white-space: nowrap;
   width: 100%;
   font-family:TexGyreHerosBold;
-  font-size: 9pt;
+  font-size: 10pt;
   line-height: 20pt;
   color: rgb(0, 0, 0);
   
@@ -281,12 +281,7 @@ a{
   
 }
 
-.h2{
-  color: rgb(0, 0, 0);
-  font-family:TexGyreHeros;
-  font-size: 28pt;
-  
-}
+
 .information {
   width: 100%;
   display: flex;
@@ -323,10 +318,10 @@ a{
   display: none;
 }
 
-.swiper-container{
+.swiper-container, .swiper-wrapper, .swiper-slide{
   display: none;
 }
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .swiper-pagination{
     display: none;
   }

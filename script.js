@@ -35,24 +35,49 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   // Check if the device is a desktop
-  if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+  if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
     // Code to execute only on desktops
-    $('#01, #02, #03, #04, #05, #06, #07, #08, #09, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19, #20, #21, #22, #23').click(function() {
+    $('.column').on('click', function() {
       var flexValue;
-      if ($(window).height() > 1500) {
-        flexValue = '58';
-        $('#01, #02, #03, #04, #05, #06, #07, #08, #09, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19, #20, #21, #22, #23').not(this).css('flex', '1');
-      } else if ($(window).height() > 1000) {
-        flexValue = '32';
-        $('#01, #02, #03, #04, #05, #06, #07, #08, #09, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19, #20, #21, #22, #23').not(this).css('flex', '1');
+      var windowHeight = $(window).height();
+
+      console.log("Window Height:", windowHeight); // Debug statement
+
+      if (windowHeight > 1500) {
+        console.log("Window height is greater than 1500");
+        flexValue = '100';
+      } else if (windowHeight >= 1000 && windowHeight <= 1500) {
+        console.log("Window height is between 1000 and 1500");
+        flexValue = '25';
       } else {
-        flexValue = '20';
-        $('#01, #02, #03, #04, #05, #06, #07, #08, #09, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19, #20, #21, #22, #23').not(this).css('flex', '1');
+        console.log("Window height is less than 1000");
+        flexValue = '23';
       }
+
+      console.log("Flex Value:", flexValue); // Debug statement
+
       $(this).css('flex', flexValue);
+    });
+
+    // Revert flex value to '1' when clicked elsewhere
+    $(document).on('click', function(event) {
+      if (!$(event.target).closest('.column').length) {
+        $('.column').css('flex', '1');
+      }
     });
   }
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
