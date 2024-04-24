@@ -35,19 +35,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('#01, #02, #03, #04, #05, #06, #07, #08, #09, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19, #20, #21, #22, #23').click(function() {
-    // Check if the device is a desktop
-    if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-      var screenHeight = $(window).height(); // Get the height of the window
-      var flexValue;
-
-      if (screenHeight > 1800) {
-        flexValue = Math.round(screenHeight / 0.5); // Use a different value for screens taller than 1800px
-      } else {
-        flexValue = Math.round(screenHeight / 1.59); // Default calculation for other screen heights
-      }
-
-      $(this).css('flex', flexValue);
-    }
+     var screenHeight = $(window).height(); // Get the height of the window
+     var flexValue = Math.round(screenHeight / 1.59); // Calculate the flex value based on the screen height
+     $(this).css('flex', flexValue);
   });
 });
 
