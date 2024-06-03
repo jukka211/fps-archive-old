@@ -348,6 +348,7 @@ a{
   
   body{
     overflow-x: hidden;
+    overflow:hidden;
   }
  .container{
   flex:0;
