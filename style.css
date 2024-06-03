@@ -400,9 +400,9 @@ a{
       height: auto;
       overflow-x: auto;
       z-index: 999;
-     
+      color:white;
       align-items:flex-start;
-      background-color: #ffffff;
+      background-color: transparent;
       margin-bottom: 10px;
     }
     
