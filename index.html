@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+   <script src="path/to/lazyload.js"></script>
 
    
 </head>
@@ -106,7 +107,7 @@
 
   <div class="container">
     <div class="column" id="01" >
-      <div class="trigger-container" onmouseover="triggerTextChange('01')" onmouseout="restoreText()"><img src="image5_50.jpg" alt="gg"></div>
+      <div class="trigger-container" onmouseover="triggerTextChange('01')" onmouseout="restoreText()"><img src="placeholder.jpg" data-src="image5_50.jpg" alt="gg" class="lazyload"></div>
       <script>
         $(document).ready(function() {
             $('#01').hover(function() {
@@ -392,7 +393,7 @@
   </div>
   
 
-  
+ 
     
 
 
