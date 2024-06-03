@@ -13,6 +13,7 @@
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
    <script src="path/to/lazyload.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.0/lazysizes.min.js" async></script>
 
    
 </head>
@@ -107,7 +108,7 @@
 
   <div class="container">
     <div class="column" id="01" >
-      <div class="trigger-container" onmouseover="triggerTextChange('01')" onmouseout="restoreText()"><img src="placeholder.jpg" data-src="image5_50.jpg" alt="gg" class="lazyload"></div>
+      <div class="trigger-container" onmouseover="triggerTextChange('01')" onmouseout="restoreText()"><img src="placeholder.jpg" data-src="image5_50.jpg" alt="gg" class="lazyload" loading="lazy"></div>
       <script>
         $(document).ready(function() {
             $('#01').hover(function() {
@@ -120,7 +121,7 @@
     </script>
     </div>
       <div class="column" id="02">
-        <div class="trigger-container" onmouseover="triggerTextChange('02')" onmouseout="restoreText()"><img src="image33.png" alt="gg"></div>
+        <div class="trigger-container" onmouseover="triggerTextChange('02')" onmouseout="restoreText()"><img src="image33.png" alt="gg"class="lazyload" loading="lazy"></div>
         <script>
           $(document).ready(function() {
               $('#02').hover(function() {
@@ -134,7 +135,7 @@
       
     </div>
     <div class="column" id="03">
-      <div class="trigger-container" onmouseover="triggerTextChange('03')" onmouseout="restoreText()"><img src="images/das_ende.gif" alt="gg"></div>
+      <div class="trigger-container" onmouseover="triggerTextChange('03')" onmouseout="restoreText()"><img src="images/das_ende.gif" alt="gg"class="lazyload" loading="lazy"></div>
       <script>
         $(document).ready(function() {
             $('#03').hover(function() {
